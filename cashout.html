@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Out - Secure Ethereum</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="images/logo-white.png" alt="Secure Ethereum Logo" class="logo-img">
+                    <span class="logo-text">Secure Ethereum</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tutorial.html">Tutorial</a></li>
+                    <li><a href="cashout.html" class="active">Cash Out</a></li>
+                    <li><a href="assets.html">Assets</a></li>
+                    <li><a href="terms.html">Terms And Conditions</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Unlock Funds Within 24 Hours</h1>
+            <p class="hero-subtitle">Secure, private, and reliable ETH conversions.</p>
+            <p>Convert ETH to USD or other supported currencies in just a few steps.</p>
+            <p><strong>Minimum transfer amount: $200 equivalent in ETH.</strong></p>
+            <a href="#cashout-form" class="btn btn-primary">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section class="cashout-steps">
+        <div class="container">
+            <div class="step-section">
+                <div class="step-number">01</div>
+                <div class="step-content">
+                    <h2>Send Your ETH</h2>
+                    <h3>Confirm Your sETH Balance</h3>
+                    <div class="step-info">
+                        <h4>Why It Matters:</h4>
+                        <p>To ensure seamless validation and activation of your Secure Ethereum account, your encrypted sETH balance must be securely held in the designated wallet.</p>
+                        <h4>What To Do:</h4>
+                        <p>Please confirm that your selected wallet contains a minimum of $200 equivalent in sETH, ready for processing.</p>
+                    </div>
+                </div>
+                <div class="step-image">
+                    <img src="images/cashout01.png" alt="Step 1">
+                </div>
+            </div>
+
+            <div class="step-section">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                    <h2>Double Check</h2>
+                    <h3>Review Before Submission</h3>
+                    <div class="step-info">
+                        <h4>Why It Matters:</h4>
+                        <p>Confirming your transfer and details helps ensure smooth processing and prevents delays in completing your request.</p>
+                        <h4>What To Do:</h4>
+                        <p>Make sure you:</p>
+                        <ul>
+                            <li>Have your sETH (minimum $200 equivalent).</li>
+                            <li>Double checked your information.</li>
+                            <li>Kept your email, wallet identifier, and payout details ready for the form below.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step-image">
+                    <img src="images/cashout02.png" alt="Step 2">
+                </div>
+            </div>
+
+            <div class="step-section">
+                <div class="step-number">03</div>
+                <div class="step-content">
+                    <h2>Select Payout Option</h2>
+                    <h3>Complete the Form</h3>
+                    <div class="step-info">
+                        <h4>Why It Matters:</h4>
+                        <p>We provide a wide range of payout methods so you can receive funds in the way that suits you best.</p>
+                        <h4>What To Do:</h4>
+                        <p>Fill out the form below with all required information.</p>
+                    </div>
+                </div>
+                <div class="step-image">
+                    <img src="images/cashout03.png" alt="Step 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cash Out Form -->
+    <section class="cashout-form-section" id="cashout-form">
+        <div class="container">
+            <div class="form-wrapper">
+                <h2>Cash Out Request Form</h2>
+                <form class="cashout-form" id="cashoutForm">
+                    <div class="form-group">
+                        <label for="name">Your name*</label>
+                        <input type="text" id="name" name="name" placeholder="Nickname" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your email*</label>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="wallet">Wallet Identifier*</label>
+                        <input type="text" id="wallet" name="wallet" placeholder="ex.: (0x86s...9787)" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="payment-method">Payment method*</label>
+                        <select id="payment-method" name="payment-method" required>
+                            <option value="">—Please choose an option—</option>
+                            <option value="credit-card">Credit Card</option>
+                            <option value="bank-transfer">Bank Transfer</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="crypto">Cryptocurrency</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="payout-handle">Payout Handle*</label>
+                        <input type="text" id="payout-handle" name="payout-handle" placeholder="@username" required>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="confirmation" name="confirmation" required>
+                            <span>I confirm I have read and accept the <a href="terms.html">terms and conditions</a></span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Check Eligibility</button>
+                </form>
+
+                <div class="form-note">
+                    <p><strong>Note:</strong> Check your email spam folder-sometimes filters block confirmations. Mark Secure Ethereum as a trusted sender to avoid missing updates.</p>
+                    <p><a href="#" class="contact-link">Contact Support</a></p>
+                    <p class="disclaimer">Disclaimer: This demo model is for testing purposes only</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo-white.png" alt="Secure Ethereum">
+                    <span class="logo-text">Secure Ethereum</span>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tutorial.html">Tutorial</a></li>
+                        <li><a href="cashout.html">Cash Out</a></li>
+                        <li><a href="assets.html">Assets</a></li>
+                        <li><a href="terms.html">Terms And Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe our newsletter to get updated on market situation</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Copyright 2025 Private Ethereum</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
