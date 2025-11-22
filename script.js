@@ -71,9 +71,49 @@ if (cashoutForm) {
             return;
         }
 
-        // Simulate form submission
-        alert('Thank you for your submission! We will review your request and contact you via email.');
-        cashoutForm.reset();
+        // Show loading state
+        const submitButton = cashoutForm.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.textContent;
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+
+        // Initialize EmailJS (replace with your Public Key)
+        emailjs.init("1S3RbZE5f-9REnVZq");
+
+        // Prepare email template parameters
+        const templateParams = {
+            from_name: formData.name,
+            from_email: formData.email,
+            wallet_address: formData.wallet,
+            payment_method: formData.paymentMethod,
+            payout_handle: formData.payoutHandle,
+            to_email: 'transcations@ethsecured.com', // Replace with your Microsoft 365 email
+            message: `New Cash Out Request:
+            
+Name: ${formData.name}
+Email: ${formData.email}
+Wallet Identifier: ${formData.wallet}
+Payment Method: ${formData.paymentMethod}
+Payout Handle: ${formData.payoutHandle}
+Terms Accepted: ${formData.confirmation ? 'Yes' : 'No'}
+
+Submitted on: ${new Date().toLocaleString()}`
+        };
+
+        // Send email using EmailJS
+        emailjs.send('service_voj12lb', 'template_kx005qj', templateParams)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Thank you for your submission! We have received your request and will contact you via email shortly.');
+                cashoutForm.reset();
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            }, function(error) {
+                console.log('FAILED...', error);
+                alert('Sorry, there was an error submitting your form. Please try again or contact support.');
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            });
     });
 }
 
